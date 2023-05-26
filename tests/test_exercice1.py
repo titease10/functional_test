@@ -1,6 +1,14 @@
-# tests/test_exercice1.py
+import pytest
+import sys
+from os.path import abspath, dirname
 
+# Add the path to the parent directory of "exercice1.py"
+sys.path.insert(0, abspath(dirname(dirname(__file__))))
+
+# Now you can import the Calculator class
 from exercice1 import Calculator
+
+# Add your test cases here
 
 def test_calculator_add():
     calculator = Calculator()
